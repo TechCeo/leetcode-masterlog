@@ -27,6 +27,9 @@
 #         print(f"{name or 'Test'} ❌ Error")
 #         print(f"   Exception: {e}")
 
+
+
+# Updated to accomodate a a variable number of input arguments
 def test(func, *args):
     """
     Usage:
