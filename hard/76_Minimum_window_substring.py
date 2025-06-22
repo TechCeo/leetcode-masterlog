@@ -86,4 +86,4 @@ if __name__ == "__main__":
     test(sol.minWindow, ("OUZODYXAZV", "XYZ"), "YXAZ", "Test 1")
     test(sol.minWindow, ("xyz", "xyz"), "xyz", "Test 2")
     test(sol.minWindow, ("x", "xy"), "", "Test 3")
-    test(sol.minWindow, ("ADOBECODEBANC", "ABC"), "BANC", "Test 4")  # Classic example
+    test(sol.minWindow, ("ADOBECODEBANC", "ABC"), "BANC", "Test 4")
