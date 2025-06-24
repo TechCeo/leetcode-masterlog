@@ -7,8 +7,6 @@ Welcome to my personal repository of LeetCode solutions — structured, explaine
 ## Repository Structure
 leetcode-masterlog/
 ├── data-structures-in-python/
-│ ├── Stack/
-│ └── Queue/
 │
 ├── easy/
 ├── medium/
