@@ -22,10 +22,10 @@ leetcode-masterlog/
 ├── README.md
 
 
-- `data-structures-in-python/`: Custom implementations of core data structures like Stack and Queue, using both array and linked list approaches. Each file includes tests and use-case comments.
+- data-structures-in-python/: Custom implementations of core data structures like Stack, Queue etc, using various approaches and exploring the trade offs.
 - easy/, medium/, hard/: Python solutions organized by LeetCode difficulty level with reflection explaining the my thought process and approach.
 - notebooks/: Jupyter notebooks with visual explanations or deep dives on selected topics.
-- utils/: Shared utilities such as test runners (`test_utils.py`) and tree builders (`binary_tree_utils.py`) used across multiple solutions.
+- utils/: Shared utilities such as test runners (test_utils.py) and tree builders (binary_tree_utils.py) used across multiple solutions.
 - Each solution includes both the .py implementation and a markdown explanation of the thought process.
 ---
 
