@@ -2,9 +2,6 @@
 
 🔗 [View on LeetCode](https://leetcode.com/problems/valid-sudoku/)
 
-You are given a 9 x 9 Sudoku board...
-
-
 ## Problem summary:
 Validate a 9x9 Sudoku board to ensure that no number is repeated in any row, column, or 3x3 sub-box.
 
