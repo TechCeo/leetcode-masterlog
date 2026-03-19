@@ -107,3 +107,25 @@ def test_tree(func: Callable, *args):
     except Exception as e:
         print(f"{test_name or 'Test'} ❌ Error")
         print(f"   Exception: {e}")
+        
+def test_tree_int_return(func: Callable, *args):
+    """
+    Usage:
+    test_tree_int_return(func, input_tree, expected_output_int, test_name)
+
+    Calls func with input_tree and compares the integer result with expected_output_int.
+    """
+    *inputs, expected_output_int, test_name = args
+    try:
+        result_root = func(*inputs)
+        # result_list = tree_to_list(result_root)
+        if result_root == expected_output_int:
+            print(f"{test_name or 'Test'} ✅ Passed")
+        else:
+            print(f"{test_name or 'Test'} ❌ Failed")
+            print(f"   Input: {tuple(inputs)}")
+            print(f"   Output: {result_root}")
+            print(f"   Expected: {expected_output_int}")
+    except Exception as e:
+        print(f"{test_name or 'Test'} ❌ Error")
+        print(f"   Exception: {e}")

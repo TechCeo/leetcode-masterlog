@@ -16,7 +16,7 @@ from typing import Optional, List
 import sys, os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from utils.test_utils import test_tree
+from utils.test_utils import test_tree_int_return
 from utils.binary_tree_utils import build_tree_from_list
 
 
@@ -58,14 +58,14 @@ class Solution:
         return level
 
 
-# # Test Cases
-# if __name__ == "__main__":
-#     sol = Solution()
+# Test Cases
+if __name__ == "__main__":
+    sol = Solution()
 
-#     test_tree(sol.maxDepth, build_tree_from_list([1, 2, 3, None, None, 4]), 3, "Test 1")
-#     test_tree(sol.maxDepth, build_tree_from_list([1]), 1, "Single Node")
-#     test_tree(sol.maxDepth, build_tree_from_list([]), 0, "Empty Tree")
-#     test_tree(sol.maxDepth, build_tree_from_list([1,2,3,4,5,6,7]), 3, "Full Tree")
+    test_tree_int_return(sol.maxDepth, build_tree_from_list([1, 2, 3, None, None, 4]), 3, "Test 1")
+    test_tree_int_return(sol.maxDepth, build_tree_from_list([1]), 1, "Single Node")
+    test_tree_int_return(sol.maxDepth, build_tree_from_list([]), 0, "Empty Tree")
+    test_tree_int_return(sol.maxDepth, build_tree_from_list([1,2,3,4,5,6,7]), 3, "Full Tree")
 
 
 """
