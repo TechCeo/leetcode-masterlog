@@ -7,23 +7,11 @@ from typing import List
 #     grouped_data[key].append(value) # No manual key check needed
 # # grouped_data is defaultdict(list, {'fruit': ['apple', 'banana'], 'animal': ['dog', 'cat']})
 # print(grouped_data)
-
-
-from collections import defaultdict
-def groupAnagrams(strs: List[str]) -> List[List[str]]:
-
-    # result {act: [act, cat], hat: [hat]}
-    str_map = defaultdict(list)
-
-    for word in strs:
-        print(word)
-        print(sorted(word))
-        str_map[sorted(word)].append(word)
-        
-    print(str_map)
-
-    return list(str_map.values())
     
 # groupAnagrams(["act", "pots", "tops", "cat", "stop", "hat"])
-num_rep = [0] * 25
-print(num_rep)
+# num_rep = [0] * 25
+# print(num_rep)
+
+x = [1,2,3]
+y = [4,5,6]
+print(x*y)
