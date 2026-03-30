@@ -11,7 +11,6 @@ import sys, os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.linked_list_utils import ListNode, build_linked_list, linked_list_to_list
-# from utils.test_utils import test
 from utils.test_utils import test_ll
 
     

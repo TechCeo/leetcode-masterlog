@@ -47,7 +47,6 @@ class Solution:
 if __name__ == "__main__":
     sol = Solution()
 
-    # Testing using the centralized test_ll helper
     test_ll(sol.removeNthFromEnd, [1, 2, 3, 4, 5], 2, [1, 2, 3, 5], "Remove 2nd from end")
     test_ll(sol.removeNthFromEnd, [1], 1, [], "Remove only node")
     test_ll(sol.removeNthFromEnd, [1, 2], 2, [2], "Remove head node")
