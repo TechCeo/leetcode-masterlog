@@ -11,14 +11,16 @@ import sys, os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.linked_list_utils import ListNode, build_linked_list, linked_list_to_list
-from utils.test_utils import test
+# from utils.test_utils import test
+from utils.test_utils import test_ll
 
 
-def test_ll(func, input_arr, expected_arr, name=""):
-    head = build_linked_list(input_arr)
-    result_head = func(head)
-    result_arr = linked_list_to_list(result_head)
-    test(lambda x: x, result_arr, expected_arr, name)
+# def test_ll(func, input_arr, expected_arr, name=""):
+#     head = build_linked_list(input_arr)
+#     result_head = func(head)
+#     result_arr = linked_list_to_list(result_head)
+#     test(lambda x: x, result_arr, expected_arr, name)
+    
 
 class IterativeSolution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
