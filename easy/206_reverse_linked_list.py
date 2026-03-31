@@ -57,10 +57,10 @@ if __name__ == "__main__":
     rec_sol = RecursiveSolution()
 
     print("--- Testing Iterative ---")
-    test_ll(iter_sol.reverseList, [1, 2, 3, 4, 5], [5, 4, 3, 2, 1], "Example 1")
-    test_ll(iter_sol.reverseList, [1, 2], [2, 1], "Example 2")
-    test_ll(iter_sol.reverseList, [], [], "Empty List")
+    test_ll(iter_sol.reverseList, build_linked_list([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1], "Example 1")
+    test_ll(iter_sol.reverseList, build_linked_list([1, 2]), [2, 1], "Example 2")
+    test_ll(iter_sol.reverseList, build_linked_list([]), [], "Empty List")
 
     print("\n--- Testing Recursive ---")
-    test_ll(rec_sol.reverseList, [1, 2, 3, 4, 5], [5, 4, 3, 2, 1], "Example 1")
-    test_ll(rec_sol.reverseList, [], [], "Empty List")
+    test_ll(rec_sol.reverseList, build_linked_list([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1], "Example 1")
+    test_ll(rec_sol.reverseList, build_linked_list([]), [], "Empty List")

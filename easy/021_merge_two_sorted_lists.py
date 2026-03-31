@@ -40,7 +40,31 @@ class Solution:
 
 if __name__ == "__main__":
     sol = Solution()
+    
+    # Import the builder for the test cases
+    from utils.linked_list_utils import build_linked_list
 
-    test_ll(sol.mergeTwoLists, [1, 2, 4], [1, 3, 4], [1, 1, 2, 3, 4, 4], "Standard Merge")
-    test_ll(sol.mergeTwoLists, [], [], [], "Both Empty")
-    test_ll(sol.mergeTwoLists, [], [0], [0], "One Empty")
+    # Now we pass the built ListNodes to the test helper
+    test_ll(
+        sol.mergeTwoLists, 
+        build_linked_list([1, 2, 4]), 
+        build_linked_list([1, 3, 4]), 
+        [1, 1, 2, 3, 4, 4], 
+        "Standard Merge"
+    )
+    
+    test_ll(
+        sol.mergeTwoLists, 
+        None, 
+        None, 
+        [], 
+        "Both Empty"
+    )
+    
+    test_ll(
+        sol.mergeTwoLists, 
+        None, 
+        build_linked_list([0]), 
+        [0], 
+        "One Empty"
+    )

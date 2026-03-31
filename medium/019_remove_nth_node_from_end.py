@@ -13,6 +13,7 @@ import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.linked_list_utils import ListNode
 from utils.test_utils import test_ll
+from utils.linked_list_utils import build_linked_list, linked_list_to_list
 
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
@@ -47,7 +48,7 @@ class Solution:
 if __name__ == "__main__":
     sol = Solution()
 
-    test_ll(sol.removeNthFromEnd, [1, 2, 3, 4, 5], 2, [1, 2, 3, 5], "Remove 2nd from end")
-    test_ll(sol.removeNthFromEnd, [1], 1, [], "Remove only node")
-    test_ll(sol.removeNthFromEnd, [1, 2], 2, [2], "Remove head node")
-    test_ll(sol.removeNthFromEnd, [1, 2], 1, [1], "Remove tail node")
+    test_ll(sol.removeNthFromEnd, build_linked_list([1, 2, 3, 4, 5]), 2, [1, 2, 3, 5], "Remove 2nd from end")
+    test_ll(sol.removeNthFromEnd, build_linked_list([1]), 1, [], "Remove only node")
+    test_ll(sol.removeNthFromEnd, build_linked_list([1, 2]), 2, [2], "Remove head node")
+    test_ll(sol.removeNthFromEnd, build_linked_list([1, 2]), 1, [1], "Remove tail node")
