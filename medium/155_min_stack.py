@@ -11,33 +11,32 @@ from utils.test_utils import test
 
 class MinStack:
     def __init__(self):
-        """
-        Using two stacks:
-        1. self.stack: Stores all the elements.
-        2. self.min_stack: Stores the minimum element present in the stack 
-           at the time that specific element was pushed.
-        """
+        # Each element is a tuple: (val, min_at_this_depth)
         self.stack = []
-        self.min_stack = []
 
     def push(self, val: int) -> None:
-        self.stack.append(val)
-        # The new minimum is the lesser of the current value 
-        # and the previous minimum (if it exists)
-        if self.min_stack:
-            val = min(val, self.min_stack[-1])
-        self.min_stack.append(val)
+        """
+        Time: O(1)
+        Space: O(n) - One tuple per element.
+        """
+        if not self.stack:
+            self.stack.append((val, val))
+        else:
+            current_min = self.stack[-1][1]
+            self.stack.append((val, min(val, current_min)))
 
     def pop(self) -> None:
+        """Time: O(1)"""
         if self.stack:
             self.stack.pop()
-            self.min_stack.pop()
 
     def top(self) -> int:
-        return self.stack[-1]
+        """Time: O(1)"""
+        return self.stack[-1][0]
 
     def getMin(self) -> int:
-        return self.min_stack[-1]
+        """Time: O(1)"""
+        return self.stack[-1][1]
 
 def test_min_stack():
     try:
